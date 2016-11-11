@@ -231,7 +231,7 @@ class Handler extends ExceptionHandler
      */
     protected function runningInDebugMode()
     {
-        return $this->debug;
+        return config('app.debug');
     }
 
     /**
