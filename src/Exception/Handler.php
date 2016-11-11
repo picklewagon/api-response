@@ -18,13 +18,6 @@ class Handler extends ExceptionHandler
     protected $format;
 
     /**
-     * Indicates if we are in debug mode.
-     *
-     * @var bool
-     */
-    protected $debug = false;
-
-    /**
      * User defined replacements to merge with defaults.
      *
      * @var array
