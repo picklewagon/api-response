@@ -245,16 +245,4 @@ class Handler extends ExceptionHandler
     {
         $this->format = $format;
     }
-
-    /**
-     * Set the debug mode.
-     *
-     * @param bool $debug
-     *
-     * @return void
-     */
-    public function setDebug($debug)
-    {
-        $this->debug = $debug;
-    }
 }
