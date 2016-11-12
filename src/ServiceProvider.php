@@ -23,6 +23,16 @@ class ServiceProvider extends LaravelServiceProvider
      */
     public function register()
     {
-        //
+        $this->registerConfig();
+    }
+
+    /**
+     * Register the configuration.
+     *
+     * @return void
+     */
+    protected function registerConfig()
+    {
+        $this->mergeConfigFrom(realpath(__DIR__ . '/../config/api-response.php'), 'api-response');
     }
 }
