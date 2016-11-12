@@ -39,8 +39,8 @@ class Handler extends ExceptionHandler
     /**
      * Render an exception into an HTTP response.
      *
-     * @param \Dingo\Api\Http\Request $request
-     * @param \Exception              $exception
+     * @param \Illuminate\Http\Request $request
+     * @param \Exception $exception
      *
      * @throws \Exception
      *
@@ -48,7 +48,6 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
-        //return parent::render($request, $exception);
         return $this->handle($exception);
     }
 
@@ -125,7 +124,7 @@ class Handler extends ExceptionHandler
     {
         $statusCode = $this->getStatusCode($exception);
 
-        if (! $message = $exception->getMessage()) {
+        if (!$message = $exception->getMessage()) {
             $message = sprintf('%d %s', $statusCode, Response::$statusTexts[$statusCode]);
         }
 
