@@ -10,7 +10,7 @@ class Factory
      * Respond with a created response and associate a location if provided.
      *
      * @param null|string $location
-     *
+     * @param null|string $content
      * @return \Picklewagon\ApiResponse\Http\Response
      */
     public function created($location = null, $content = null)
