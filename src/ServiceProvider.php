@@ -3,6 +3,7 @@
 namespace Picklewagon\ApiResponse;
 
 use Illuminate\Support\ServiceProvider as LaravelServiceProvider;
+use Picklewagon\ApiResponse\Validators\RestValidator;
 
 class ServiceProvider extends LaravelServiceProvider
 {
@@ -13,7 +14,9 @@ class ServiceProvider extends LaravelServiceProvider
      */
     public function boot()
     {
-        //
+        Validator::resolver(function ($translator, $data, $rules, $messages) {
+            return new RestValidator($translator, $data, $rules, $messages);
+        });
     }
 
     /**
