@@ -21,7 +21,7 @@ class RestValidator extends Validator
     {
         $message = $this->getMessage($attribute, $rule);
 
-        $message = $this->doReplacements($message, $attribute, $rule, $parameters);
+        $message = $this->makeReplacements($message, $attribute, $rule, $parameters);
 
         $customMessage = new MessageBag();
 

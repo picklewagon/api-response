@@ -2,6 +2,7 @@
 
 namespace Picklewagon\ApiResponse;
 
+use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Support\ServiceProvider as LaravelServiceProvider;
 use Picklewagon\ApiResponse\Validators\RestValidator;
 
