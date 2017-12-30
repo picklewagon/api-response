@@ -33,7 +33,7 @@ return [
     |
     */
 
-    'defaultFormat' => env('API_DEFAULT_FORMAT', 'json'),
+    'defaultFormat' => 'json',
 
     'formats' => [
 
