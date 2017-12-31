@@ -3,7 +3,6 @@
 namespace Picklewagon\ApiResponse\Http\Response;
 
 use Picklewagon\ApiResponse\Http\Response;
-use Symfony\Component\HttpFoundation\Response as HttpResponse;
 
 class Factory
 {
@@ -17,7 +16,7 @@ class Factory
     public function created($location = null, $content = null)
     {
         $response = new Response($content);
-        $response->setStatusCode(HttpResponse::HTTP_CREATED);
+        $response->setStatusCode(Response::HTTP_CREATED);
 
         if (!is_null($location)) {
             $response->header('Location', $location);
