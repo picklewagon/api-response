@@ -6,7 +6,7 @@ services:
             context: ./
         volumes:
             # This volume allows us to run unit tests / etc
-            - ./:/var/www/app
+            - ./:/var/www/app:consistent
 
             # Add provisioning scripts to make sure everything is ready
             - ./.docker/config/scripts/init-pkg.sh:/var/www/app/.docker/config/init.d/01-init.sh
